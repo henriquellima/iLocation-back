@@ -12,32 +12,5 @@ import br.com.verbososcorp.ilocation.exceptions.customExceptions.OrderNotFoundEx
 
 
 class OrderServiceTest {
-	
-	@Autowired
-	private OrderService service;
 
-	@Test
-	public void shoudReturnGetAll() {
-		Assertions.assertTrue(service.getAll().size() >= 0);
-		
-	}
-	
-	@Test
-	public void shoudExistGetAll() {
-		Assertions.assertTrue(service.getAll() != null);
-	}
-	
-	@Test
-	public void shouldReturnOrderNotFoundException() throws Exception {
-		try {
-			service.getOrderByID(-1);
-			fail();
-		} catch(OrderNotFoundException e) {
-			Assertions.assertTrue(true);
-		}		
-	}
-	
-
-
-	
 }
